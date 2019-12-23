@@ -20,7 +20,7 @@ add5(1);
 function add6(x:number,y=0,z:number,q=1){
     return x+y+z+q
 }
-add6(1,undefined,2)// 毕传实参前默认参数必须用undefined站位，后的默认参数可以不穿
+add6(1,undefined,2)// 必传实参前默认参数必须用undefined站位，后的默认参数可以不穿
 
 // 剩余参数（针对参数不固定）
 function add7(x:number,...rest:number[]){
