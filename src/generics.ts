@@ -18,10 +18,12 @@ function log<T>(value:T):T{
 // }
 
 //用泛型约束接口其他成员 将<T>放到接口名后面
-interface Log<T = number>{
+// interface Log<T = number>{
+interface Log<T>{
     (value:T):T
 }
 // *在使用泛型约束了接口的所有成员之后，实现时必须指定一个类型,或者在接口定义时，给参数指定一个默认类型
-let myLog :Log = log  //myLog的参数必须是number
+let myLog :Log <number> = log  //myLog的参数必须是number
+// let myLog :Log = log  //myLog的参数必须是number
 myLog(1)
 
