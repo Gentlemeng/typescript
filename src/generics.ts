@@ -1,16 +1,18 @@
-// 泛型
+// 泛型 ：不预先确定的数据类型，具体的类型在使用的时候才能确定
 // 定义一个泛型函数
 function log<T>(value:T):T{
     console.log(value)
     return value;
 }
 // 两种调用
-// log<string[]>(['a','b'])
-// log(['a','b'])
+// log<string[]>(['a','b'])  //直接指明参数类型
+// log(['a','b']) //类型推断
+
 
 // 定义函数类型
 // type Log = <T>(value:T) => T  //类型别名
-// let myLog:Log = log
+
+// let myLog:Log = log  // 泛型函数
 
 // 泛型接口
 // interface Log{
@@ -26,4 +28,7 @@ interface Log<T>{
 let myLog :Log <number> = log  //myLog的参数必须是number
 // let myLog :Log = log  //myLog的参数必须是number
 myLog(1)
+
+// 小结
+//  泛型变量和函数等同对待  是代表类型的参数而不是代表值的参数
 

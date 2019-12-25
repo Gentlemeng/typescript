@@ -63,5 +63,5 @@ console.log(bus);
 class A extends Auto{
     color="red"
 }
-let a = new A()
-console.log(a);
+let aa = new A()
+console.log(aa);
